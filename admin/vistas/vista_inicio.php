@@ -1,0 +1,1 @@
+<?php	include "includes/cabecera_admin.php";?>	<h1>		<img height="40px" style="vertical-align: middle;" src="../img/homescreen.png" /> 		<?php echo $idioma['adm_panel']; ?>	</h1><?php		include "includes/pie.php"; ?>

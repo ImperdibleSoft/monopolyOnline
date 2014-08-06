@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	Options -Multiviews
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	
+	RewriteRule ^invitacion-(.+)$ 						index.php?invitacion=$1 [L]
+	RewriteRule ^entrar_mesa-([0-9]+)-([a-zA-Z0-9_]+)$	index.php?action=entrar_mesa&mesa=$1&$2=ok [L]
+	RewriteRule ^entrar_mesa-([0-9]+)$					index.php?action=entrar_mesa&mesa=$1 [L]
+	RewriteRule ^partida-([0-9]+)$						partida.php?id_partida=$1 [L]
+	RewriteRule ^misdatos$								index.php?action=configuracion&vista=misdatos [L]
+	RewriteRule ^admin-([a-zA-Z0-9_]+)-([0-9]+)$ 		admin/index.php?seccion=$1&partida=$2 [L]
+	RewriteRule ^admin-([a-zA-Z0-9_]+)$ 				admin/index.php?seccion=$1 [L]
+	RewriteRule ^admin$ 								admin/index.php [L]
+	RewriteRule ^dejar_partida$							partida.php?action=dejar_partida [L]
+	RewriteRule ^partida$ 								partida.php [L]
+	RewriteRule ^([a-zA-Z0-9_]+)$						index.php?action=$1 [L]
+	
+#	RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+)$ index.php?menu=$1&opt=$2 [L]
+#	RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+)-([0-9]+)$ index.php?menu=$1&opt=$2&ver=$3 [L]
+</IfModule>

@@ -1,0 +1,18 @@
+﻿{
+	"manifest_version": 2,
+	"name": "Monopoly Online",
+	"description": "Juega gratis al monopoly con tus compañeros",
+	"version": "2.0",
+	"icons": {
+		"128": "logo_128.png",
+		"24": "logo_24.png"
+	},
+	"app": {
+		"urls": [
+			"http://monopoly2.imperdiblesoft.com/"
+		],
+		"launch": {
+			"web_url": "http://monopoly2.imperdiblesoft.com/"
+		}
+	}
+}

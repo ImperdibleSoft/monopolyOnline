@@ -1,0 +1,1862 @@
+body.principal{
+	background: black;
+	text-align: justify;
+	font-family: 'Maven Pro', arial, serif;
+	font-size: 14px;
+	min-width: 1156px;
+}
+
+/*----------GENÉRICOS----------*/
+p,h1,h2,h3,h4,label,.letrapeque{
+	color: #666;
+	text-shadow: 1px 1px 1px #fff;
+}
+h1{
+	font-size: 24px; 
+	text-align: left;
+ }
+br{
+	clear:left; 
+}
+br.dcha{
+	clear:right; 
+}
+th{
+	background: white; 
+}
+.letrapeque{
+	position: relative; 
+	display: block; 
+	float: left;  
+	font-size: 14px; 
+}
+.izquierda {
+	float:left;
+}
+.derecha {
+	float:right;
+}
+.mitad1{
+	width: 58%;
+}
+.mitad2{
+	width: 38%;
+}
+.normal{
+	width: auto!important;
+	height: auto!important;
+}
+.margen-izq{
+	margin-left: 2%;
+}.margen-dcha{
+	margin-right: 2%;
+}
+
+img.emoticono{
+	height: 16px;
+	margin-top: -2px;
+	vertical-align: middle;
+}
+img.icono{
+	height: 16px;
+}
+label{
+	padding-top: 8px;
+	font-size: 24px;
+	color: #666;
+	text-shadow: 1px 1px 1px #fff;
+}
+label.aclaracion{
+	display: inline;
+	font-size:14px;
+	padding-left: 5px;
+}
+input[type='text'], input[type='password'], input[type='email']{
+	margin-top: 5px;
+	padding: 5px 5px 5px 5px;
+	font-size: 24px;
+	background: rgba(0, 0, 0, 0.5);
+	border: 0px;
+	color: white;
+	border-radius: 5px;
+}
+input[type='submit'], input[type='button'], a.boton{
+	background: url("img/aceptar-hover.png");
+	position: relative;
+	float: left;
+	margin: 5px 5px 5px 5px;
+	padding: 3px 15px 4px 15px;
+	font-size: 14px;
+	text-decoration: none;
+	color: black;
+	cursor: default;
+	border: 1px solid #6e8192;
+	border-radius: 3px;
+	text-shadow: none!important;
+}
+input[type='submit']:hover, input[type='button']:hover, a.boton:hover{
+	background: url("img/aceptar-clicked.png");
+}
+input[type='submit']:active, input[type='button']:active, a.boton:active{
+	background: url("img/aceptar-clicked.png");
+	box-shadow:  inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+}
+input[type='submit'].aceptar-dcha, input[type='button'].aceptar-dcha, a.boton.aceptar-dcha{
+	background: url("img/aceptar-hover.png");
+	float: right;
+}
+input[type='submit'].aceptar-dcha:hover, input[type='button'].aceptar-dcha:hover, a.boton.aceptar-dcha:hover{
+	background: url("img/aceptar-clicked.png");
+}
+input[type='submit'].aceptar-dcha:active, input[type='button'].aceptar-dcha:active, a.boton.aceptar-dcha:hover{
+	background: url("img/aceptar-clicked.png");
+}
+input[type='submit'].cancelar, a.cancelar{
+	background: url("img/cancelar-hover.png");
+	float: right;
+}
+input[type='submit'].cancelar:hover, a.cancelar:hover{
+	background: url("img/cancelar-clicked.png");
+}
+input[type='submit'].cancelar:active, a.cancelar:active{
+	background: url("img/cancelar-clicked.png");
+}
+input[type='submit'].cancelar-izq, a.cancelar-izq{
+	background: url("img/cancelar-hover.png");
+}
+input[type='submit'].cancelar-izq:hover, a.cancelar-izq:hover{
+	background: url("img/cancelar-clicked.png");
+}
+input[type='submit'].cancelar-izq:active, a.cancelar-izq:active{
+	background: url("img/cancelar-clicked.png");
+}
+*.celda_espaciada{
+	padding: 5px 5px 5px 5px;
+}
+
+div.flecha{
+	position: absolute;
+	display: none;
+	float: left;
+	width: 0;
+	height: 0;
+	border-top : 10px solid transparent;
+	border-bottom : 10px solid transparent;
+	border-right : 10px solid #222;
+
+	z-index: 998;
+}
+#explicacion.explicacion{
+	position: absolute;
+	display: none;
+	float: left;
+	padding: 10px;
+	max-width: 250px;
+	color: white;
+	text-align: left!important;
+	
+	background: #222;
+	z-index: 999;
+}
+
+#anuncios{
+	position: fixed;
+	/*
+	display: none;
+	*/
+	display: inline-block;
+	float: left;
+	width: 160px;
+	top: 30px;
+	left: 0px;
+	
+	z-index: 60;
+	background: white;
+	
+}
+div.anuncio_clic{
+	display: hidden;
+	float: left;
+}
+
+#contenedor{
+	position: relative;
+	display: inline-block;
+	float: left;
+	z-index: 50;
+	min-width: 995px!important;
+	/*
+	width: 100%;
+	*/
+	width: calc(100% - 161px);
+	width: -webkit-calc(100% - 161px);
+	width: -moz-calc(100% - 161px);
+	left: 161px;
+	
+}
+#mensajes a{
+	cursor: default;
+}
+
+#consultarecibida{
+	position: relative;
+	display: none;
+	float: left;
+	width: calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	margin: 0px!important;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+	font-size: 16px;
+	text-align: left;
+	color: black;
+	word-wrap: break-word;
+	background: white;
+	border-bottom: 1px solid black;
+}
+#sysmsg{
+	position: relative;
+	width: 50%;
+	left: 50%;
+	margin-left: -30%;
+	top: 40px;
+	padding:  1% 5% 1% 5%;
+	font-size: 16px;
+	text-align:center;
+	background: red;
+	color: white;
+	border: 2px solid brown;
+	border-radius: 5px;
+}
+
+/*----------TOP MENU----------*/
+#topmenu{
+	position:fixed;
+	display: block;
+	float:left;
+	width: 100%;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	padding-top: 7px;
+	font-weight: bold;
+	color: #ddd;
+	z-index: 75;
+	background: #333333;
+	box-shadow: 0px 2px 4px #000000;
+}
+#topmenu li{
+	position: relative;
+	display:inline;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#topmenu li.derecha{
+	text-align: right;
+}
+#topmenu li a{
+	color: white;
+	text-decoration: none;
+}
+
+/*----------MARCOS------------*/
+#vista_inicio, #vista_micuenta, #misdatos{
+	position: relative;
+	display: inline-block;
+	float:left;
+	width: 50%;
+	min-width: 250px;
+	top: 40px;
+	left: 50%;
+	margin-left: -35%;
+	padding: 10px 20px 10px 20px;
+	background: rgba(255,255,255,0.7);
+	font-size: 18px;
+}
+
+/*----------INDEX------------*/
+#header_inicio{
+	position:fixed;
+	display: block;
+	float:left;
+	width: 100%;
+	height: 23px;
+	top: 0px;
+	left: 0px;
+	padding-top: 7px;
+	font-weight: bold;
+	color: #ddd;
+	z-index: 75;
+	background: #333333;
+	box-shadow: 0px 2px 4px #000000;
+}
+#header_inicio li{
+	position: relative;
+	display:inline;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#header_inicio li.derecha{
+	text-align: right;
+}
+#header_inicio li a{
+	color: white;
+	text-decoration: none;
+}
+
+#portada_banner{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 250px;
+
+	background: url('wallpapers/tapete.jpg') repeat;
+}
+#portada_banner img{
+	position: relative;
+	display: block;
+	float: left;
+	left: 50%;
+	margin-left: -225px;
+	top: 50%;
+	margin-top: -225px;
+	
+	
+}
+
+#portada_contenido{
+	position: relative;
+	display: block;
+	float: left;
+	width: 90%;
+	min-height: 100px;
+	top: 30px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: rgba(255,255,255,0.7);
+}
+#portada_contenido div.feature{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	padding: 20px;
+}
+#portada_contenido div.feature span img{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+#portada_contenido div.feature span.izquierda img{
+	margin-right: 20px;
+}
+#portada_contenido div.feature span.derecha img{
+	margin-left: 20px;
+}
+#portada_contenido div.feature ul{
+	margin-top: 5px;
+}
+#portada_contenido div.feature ul li{
+	list-style-type: disc!important;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+#portada_contenido div#galeria img{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+#portada_contenido div.espaciador{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: url('http://www.imperdiblesoft.com/img/wallpapers/tapete.jpg') fixed repeat;
+}
+#login {
+	position: relative;
+	text-align: center;
+}
+
+/*----------TOP USUARIOS------------*/
+#top_usuarios {
+	position: relative;
+	float: left;
+	width: 420px;
+	top: 40px;
+	margin-bottom: 10px;
+	left: 2%;
+	padding: 10px 20px 10px 20px;
+	font-size: 18px;
+	background: rgba(255,255,255,0.7);
+}
+#top_usuarios table, #top_usuarios th, #top_usuarios td{
+	padding: 5px;
+	text-align: center;
+}
+#top_usuarios th.nombre, #top_usuarios td.nombre{
+	text-align: left;
+}
+#top_usuarios p.letrapeque{
+	width: 100%;
+}
+
+/*----------CLASIFICACION/*----------*/
+#vista_clasificacion{
+	position: relative;
+	display: block;
+	float: left;
+	top: 40px;
+	left: 2%;
+	min-width: 420px;
+	width: 90%;
+	padding: 10px 20px 10px 20px;
+	font-size: 18px;
+	margin-bottom: 30px;
+	background: rgba(255,255,255,0.7);
+}
+#vista_clasificacion table{
+	width: 100%;
+}
+#vista_clasificacion table, #vista_clasificacion th, #vista_clasificacion td{
+	padding: 5px;
+	text-align: center;
+}
+#vista_clasificacion th, #vista_clasificacion td{
+	border: 1px solid black;
+}
+#vista_clasificacion th.nombre, #vista_clasificacion td.nombre{
+	text-align: left;
+}
+
+/*----------VER MESAS------------*/
+#vista_mesas {
+	position: relative;
+	float: right;
+	height: auto;
+	min-width: 420px;
+	width: calc(94% - 500px);
+	width: -webkit-calc(94% - 500px);
+	width: -moz-calc(94% - 500px);
+	top: 40px;
+	margin-bottom: 10px;
+	right: 2%;
+	padding: 10px 20px 10px 20px;
+	background: rgba(255,255,255,0.7);
+	font-size: 18px;
+}
+#vista_mesas table, #vista_mesas th, #vista_mesas td{
+	padding: 5px;
+	text-align: center;
+}
+#vista_mesas table{
+	width: 100%;
+}
+#vista_mesas th, #vista_mesas td{
+	width: 20%;
+}
+#vista_mesas a, #vista_mesas a:visited{
+	text-decoration: none;
+	color: black;
+} 
+
+/*----------DENTRO DE UNA MESA------------*/
+#lista_jugadores, #lista_espectadores {
+	position: relative;
+	float: left;
+	display: table-row;
+	width: 500px;
+	max-height: calc(100% - 70px);
+	max-height: -webkit-calc(100% - 70px);
+	max-height: -moz-calc(100% - 70px);
+	top: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	left: 5%;
+	padding: 10px 20px 10px 20px;
+	background: rgba(255,255,255,0.7);
+	font-size: 18px;
+}
+#lista_jugadores table, #lista_jugadores th, #lista_jugadores td{
+	padding: 5px;
+	text-align: center!important;
+}
+#lista_espectadores table, #lista_espectadores th, #lista_espectadores td{
+	padding: 5px;
+}
+ 
+#lista_jugadores table, #lista_espectadores table{
+	width: 100%;
+}
+
+/*-----------CONFIGURACIÓN-----------*/
+#form_micuenta{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+#vista_micuenta table{
+	float: left;
+}
+
+#vista_micuenta table.clasificacion, #vista_micuenta th.clasificacion, #vista_micuenta td.clasificacion{
+	padding: 5px;
+	text-align: center;
+}
+#vista_micuenta table.clasificacion{
+	float: right;
+	margin-top: 10px;
+}
+#form_imagen{
+	position:relative;
+	vertical-align: middle;
+	max-height: 40px;
+	max-width: 40px;
+}
+
+/*-----------JUEGO------------*/
+
+#menu_raton.menu_raton{
+	position: fixed;
+	display: none;
+	float: left;
+	width: auto;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	z-index: 55;
+	background: #f6f6f6;
+	opacity: 0.9;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.3);
+}
+#menu_raton.menu_raton a{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 60px);
+	width: -webkit-calc(100% - 60px);
+	width: -moz-calc(100% - 60px);
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 40px;
+	text-decoration: none!important;
+	
+	color: black;
+	
+	cursor: default;
+}
+#menu_raton.menu_raton a:hover{
+	color: white;
+	background: #2b8d17;
+}
+#menu_raton.menu_raton a:active{
+	color: white;
+	background: #257a14;
+}
+
+
+#tablero{
+	position: relative;
+	display: inline-block;
+	float: left;
+	left: 10px;
+	top: 40px;
+	
+	background:#b6d3bd url('img/logotipo.png') center no-repeat;
+}
+
+#casilla0{
+	background: url(img/1-0.jpg)no-repeat;
+}
+#casilla1{
+	background: url(img/2-0.jpg)no-repeat;
+}
+#casilla2{
+	background: url(img/comunidad.jpg)no-repeat;
+}
+#casilla3{
+	background: url(img/4-0.jpg)no-repeat;
+}
+#casilla4{
+	background: url(img/5-0.jpg)no-repeat;
+}
+#casilla5{
+	background: url(img/6-0.jpg)no-repeat;
+}
+#casilla6{
+	background: url(img/7-0.jpg)no-repeat;
+}
+#casilla7{
+	background: url(img/suerte.jpg)no-repeat;
+}
+#casilla8{
+	background: url(img/9-0.jpg)no-repeat;
+}
+#casilla9{
+	background: url(img/10-0.jpg)no-repeat;
+}
+#casilla10{
+	background: url(img/11-0.jpg)no-repeat;
+}
+#casilla11{
+	background: url(img/12-0.jpg)no-repeat;
+}
+#casilla12{
+	background: url(img/13-0.jpg)no-repeat;
+}
+#casilla13{
+	background: url(img/14-0.jpg)no-repeat;
+}
+#casilla14{
+	background: url(img/15-0.jpg)no-repeat;
+}
+#casilla15{
+	background: url(img/16-0.jpg)no-repeat;
+}
+#casilla16{
+	background: url(img/17-0.jpg)no-repeat;
+}
+#casilla17{
+	background: url(img/comunidad2.jpg)no-repeat;
+}
+#casilla18{
+	background: url(img/19-0.jpg)no-repeat;
+}
+#casilla19{
+	background: url(img/20-0.jpg)no-repeat;
+}
+#casilla20{
+	background: url(img/21-0.jpg)no-repeat;
+}
+#casilla21{
+	background: url(img/22-0.jpg)no-repeat;
+}
+#casilla22{
+	background: url(img/suerte.jpg)no-repeat;
+}
+#casilla23{
+	background: url(img/24-0.jpg)no-repeat;
+}
+#casilla24{
+	background: url(img/25-0.jpg)no-repeat;
+}
+#casilla25{
+	background: url(img/26-0.jpg)no-repeat;
+}
+#casilla26{
+	background: url(img/27-0.jpg)no-repeat;
+}
+#casilla27{
+	background: url(img/28-0.jpg)no-repeat;
+}
+#casilla28{
+	background: url(img/29-0.jpg)no-repeat;
+}
+#casilla29{
+	background: url(img/30-0.jpg)no-repeat;
+}
+#casilla30{
+	background: url(img/31-0.jpg)no-repeat;
+}
+#casilla31{
+	background: url(img/32-0.jpg)no-repeat;
+}
+#casilla32{
+	background: url(img/33-0.jpg)no-repeat;
+}
+#casilla33{
+	background: url(img/comunidad2.jpg)no-repeat;
+}
+#casilla34{
+	background: url(img/35-0.jpg)no-repeat;
+}
+#casilla35{
+	background: url(img/36-0.jpg)no-repeat;
+}
+#casilla36{
+	background: url(img/suerte2.jpg)no-repeat;
+}
+#casilla37{
+	background: url(img/38-0.jpg)no-repeat;
+}
+#casilla38{
+	background: url(img/39-0.jpg)no-repeat;
+}
+#casilla39{
+	background: url(img/40-0.jpg)no-repeat;
+}
+.casilla{
+	border: solid 2px black;
+}
+
+#tablero table{
+	text-align:center;
+}
+#tablero table a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+#tablero img.ficha{
+	position: absolute;
+	display: none;
+	float: left;
+	height: 50px!important;
+	border: none;
+}
+
+#infodejugador{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 39%;
+	height: 554px;
+	left: 40px;
+	top: 40px;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 2px 0 rgba(0,0,0,0.7);
+}
+#infodejugador h1.juego{
+	text-shadow: 1px 1px 1px #000;
+	text-align: center;
+	font-size:25px;
+	color: white;
+	text-shadow: none;
+}
+#infodejugador h2{
+	font-size:14px;
+	font-weight: bold;
+	margin-top:4px;
+	color: white;
+	text-shadow: none;
+}
+#infodejugador p{
+	font-size:14px;
+	margin-top:8px;
+	text-align: center;
+	color: white;
+	text-shadow: none;
+}
+#infodejugador #titulo{
+	height:auto;
+	width:100%;
+	}
+
+#infodejugador #jugadores{
+	position: relative;
+	display: block;
+	float: left;
+	margin-top:10px;
+	width:100%;
+	height: 110px;
+}
+#infodejugador #jugadores #jugador1 div.info_mostrar, #infodejugador #jugadores #jugador2 div.info_mostrar, #infodejugador #jugadores #jugador3 div.info_mostrar, #infodejugador #jugadores #jugador4 div.info_mostrar{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+	
+	background: rgba(0, 0, 0, 0.7);
+	background-position: initial initial;
+	background-repeat: initial initial;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#infodejugador #jugadores img.fichas{
+	width:60px;
+	}
+#infodejugador #jugadores #jugador1{
+	position:relative;
+	display:inline-block;
+	float: left;
+	width:25%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+#infodejugador #jugadores #jugador2{
+	position:relative;
+	display:inline-block;
+	float: left;
+	width:25%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+#infodejugador #jugadores #jugador3{
+	position:relative;
+	display:inline-block;
+	float: left;
+	width:25%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+#infodejugador #jugadores #jugador4{
+	position:relative;
+	display:inline-block;
+	float: left;
+	width:25%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+
+#infodejugador #mensaje_estado{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 20px);
+	width: -moz-calc(100% - 20px);
+	width: -webkit-calc(100% - 20px);
+	padding: 10px;
+	margin-top: 10px;
+	
+	background: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#infodejugador #mensaje_estado p{
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0px!important;
+	text-align: left!important;
+	cursor: default;
+}	
+#infodejugador #datosjugador{
+	position: relative;
+	display: block;
+	float: left;
+	width:100%;
+	height: 350px;
+	margin-top: 10px;
+	text-align:left;
+	overflow:auto;
+	background: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#infodejugador #datosjugador h1{
+	text-align:left;
+	padding: 0px 20px 0px 20px;
+}
+#infodejugador #datosjugador p{
+	text-align:left;
+	font-weight: bold;
+	padding: 0px 20px 0px 20px;
+}
+#infodejugador #datosjugador p.situacion{
+	font-weight: normal;
+	text-align: center;
+}
+#infodejugador #datosjugador a{
+	text-decoration: none!important;
+}
+
+#mensajes, #mensajes2{
+	position: fixed;
+	display: none;
+	float: left;
+	width: 100%;
+	height: 100%;
+	
+	z-index: 90;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+#mensajes img#dado1, #mensajes img#dado2{
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	border: none;
+}
+#mensajes img#dado1{
+	margin-left: -300px;
+}
+#mensajes img#dado2{
+	margin-left: 100px;
+}
+
+#tarjeta, #tarjeta1, #tarjeta2, #tarjeta3, #tarjeta4, #tarjeta5, #tarjeta_negocio{
+	position: absolute;
+	display: block;
+	float: left;
+	padding: 25px;
+	
+	text-align: center;
+	font-weight: bold;
+	
+	z-index: 91;
+	background: white;
+	box-shadow: 2px 2px 5px #000;
+	-moz-box-shadow: 2px 2px 5px #000;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#botonera{
+	position: absolute;
+	display: block;
+	float: right;
+	right: 25px;
+	bottom: 25px;
+}
+#tarjeta a, #tarjeta1 a, #tarjeta2 a, #tarjeta3 a, #tarjeta4 a, #tarjeta5 a{
+	position: relative!important;
+	display: inline-block!important;
+	float: left!important;
+}
+
+#tarjeta{	
+	width: 300px;
+	height: 180px;
+	left: 50%;
+	top: 50%;
+	margin-left: -175px;
+	margin-top: -115px;
+}
+#tarjeta img{
+	width: 75px;
+	height: 75px;
+	padding-bottom: 10px;
+}
+#tarjeta h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+
+#tarjeta2{
+	width: 300px;
+	height: 310px;
+	left: 50%;
+	top: 50%;
+	margin-left: -175px;
+	margin-top: -175px;
+}
+#tarjeta2 img{
+	width: 75px;
+	height: 75px;
+	padding-bottom: 10px;
+}
+#tarjeta2 h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta2 p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+#tarjeta2 table{
+	position: relative;
+	width: 154px;
+	margin-left: 67px;
+	font-size:10px;
+	border-left: solid 3px black;
+	border-right: solid 3px black;
+	border-top: solid 2px black;
+	border-bottom: solid 3px black;
+}
+#tarjeta2 .titulo{
+	font-size: 11px;
+	line-height: 25px;
+	border-bottom: solid 0px black;
+	border-top: solid 3px black;
+	font-weight: bold;
+}
+#tarjeta2 table td{
+	padding: 3px 3px 3px 3px;
+}
+#tarjeta2 table td.centro{	
+	text-align: center;
+}
+#tarjeta2 table td.derecha{	
+	text-align: right;
+}
+
+#tarjeta3{
+	width: 300px;
+	height: 150px;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -125px;
+}
+#tarjeta3 img{
+	width: 75px;
+	height: 75px;
+	padding-bottom: 10px;
+}
+#tarjeta3 h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta3 p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+
+#tarjeta4{
+	width: 350px;
+	height: 180px;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -115px;
+}
+#tarjeta4 h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta4 p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+
+#tarjeta5{
+	width: 600px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	margin-left: -325px;
+	margin-top: -225px;
+	}
+#tarjeta5 h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta5 p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+#tarjeta5 textarea.texto_ticket{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%!important;
+	height: 212px!important;
+	resize:none!important;
+}
+#tarjeta5 h2{
+	font-size: 16px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	text-align: left!important;
+	color: black!important;
+}
+#tarjeta5 p.ticket_consulta{
+	font-size: 14px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-weight: normal!important;
+	text-align: left!important;
+}
+#tarjeta5 p.ticket_respuesta{
+	font-size: 14px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-weight: normal!important;
+	text-align: left!important;
+	color: black!important;
+}
+
+#fichacasilla{
+	width:225px;
+	height: 300px;
+	float:left;
+	padding: 25px 25px 25px 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#fichacasilla table{
+	position: relative;
+	width: 220px;
+	line-height: 20px;
+	font-size:14px;
+	border-left: solid 3px black;
+	border-right: solid 3px black;
+	border-top: solid 2px black;
+	border-bottom: solid 3px black;
+}
+#fichacasilla .titulo{
+	font-size: 16px;
+	line-height: 35px;
+	margin-top:5px;
+	border-bottom: solid 0px black;
+	border-top: solid 3px black;
+	font-weight: bold;
+}
+#fichacasilla table td{
+	padding: 4px 10px 4px 10px;
+}
+#fichacasilla table td.centro{	
+	text-align: center;
+}
+#fichacasilla table td.derecha{	
+	text-align: right;
+}
+#infocasilla{
+	width: 225px;
+	float: right;
+	padding: 25px 25px 25px 25px;
+}
+#infocasilla p{
+	font-size: 16px;
+	line-height: 40px;
+	text-align: left;
+}
+
+#tarjetacasas{
+	position: fixed;
+	width: 450px;
+	left: 50%;
+	margin-left: -175px;
+	height: 170px;
+	top: 50%;
+	margin-top: -135px;
+	background: white;
+	text-align: center;
+	font-weight: bold;
+	padding: 25px 25px 25px 25px;
+	-moz-box-shadow: 2px 2px 5px #000;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	box-shadow: 2px 2px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#tarjetacasas h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjetacasas img{
+	width: 40px;
+	height: 40px;
+}
+#tarjetacasas a.comprar{
+	left:10px;
+}
+#tarjetacasas a.vender{
+	right: 10px;
+}
+
+#tarjetamensajes{
+	position: absolute;
+	width: 350px;
+	left: 50%;
+	margin-left: -225px;
+	height: 170px;
+	top: 50%;
+	margin-top: -135px;
+	background: white;
+	text-align: center;
+	font-weight: bold;
+	padding: 25px 25px 25px 25px;
+	-moz-box-shadow: 2px 2px 5px #000;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	box-shadow: 2px 2px 5px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+#tarjetamensajes h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjetamensajes p{
+	margin-bottom: 10px;
+}
+#tarjetamensajes .botones{
+	display: inline;
+}
+#tarjetamensajes a{
+	display: inline-block;
+	padding-top: 7px;
+	height: 22px;
+	width: 80px;
+	padding-left: 10px;
+	padding-right: 10px;
+	bottom: 10px;
+	color: black;
+	border: 1px solid #6e8192;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+#tarjetamensajes a.boton{
+	position: absolute;
+	background: url("../img/cancelar-normal.png");
+	bottom: 10px;
+	right: 10px;
+}
+#tarjetamensajes a.boton:hover{
+	background: url("../img/cancelar-hover.png");
+}
+#tarjetamensajes a.boton:active{
+	background: url("../img/cancelar-clicked.png");
+	border: 1px solid #a36666;
+}
+#tarjetamensajes a.jugador{
+	background: url("../img/aceptar-normal.png");
+	margin-left:5px;
+	margin-right:5px;
+}
+#tarjetamensajes a.jugador:hover{
+	background: url("../img/aceptar-hover.png");
+}
+#tarjetamensajes a.jugador:active{
+	background: url("../img/aceptar-clicked.png");
+	border: 1px solid #66a266;
+}
+#tarjetamensajes a.cancelar{
+	background: url("../img/cancelar-normal.png");
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#tarjetamensajes a.cancelar:hover{
+	background: url("../img/cancelar-hover.png");
+}
+#tarjetamensajes a.cancelar:active{
+	background: url("../img/cancelar-clicked.png");
+	border: 1px solid #a36666;
+}
+#tarjetamensajes input{
+	text-align: right;
+}
+
+#negociador{
+	position: fixed;
+	display: block;
+	float: left;
+	width: 300px;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -100px;
+	text-align: center;
+	
+	padding: 25px 25px 25px 25px;
+	
+	background: white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 2px 2px 5px #000;
+	-moz-box-shadow: 2px 2px 5px #000;
+	-webkit-box-shadow: 2px 2px 5px #000;
+}
+#negociador #neg_contenido{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 100%!important;
+	height: calc(100% - 50px);
+	height: -moz-calc(100% - 50px);
+	height: -webkit-calc(100% - 50px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#negociador table{
+	position: relative;
+	display: inline-block;
+	width: calc(25% - 20px);
+	width: -moz-calc(25% - 20px);
+	width: -webkit-calc(25% - 20px);
+}
+#negociador table.izquierda{
+	margin-right: 10px;
+}
+#negociador table.derecha{
+	margin-left: 10px;
+}
+#negociador table, #negociador th, #negociador td{
+	padding: 5px;
+	text-align: center;
+}
+#negociador table th, #negociador table td{
+	border: 1px dotted grey;
+}
+#negociador table th{
+	width: 100%;
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	height: 25px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background: #eeeeee;
+}
+#negociador table td.nombre{
+	width: calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+}
+#negociador table td.flecha{
+	width: 40px;
+}
+#negociador table td.dinero{
+	padding-top: 17px;
+	padding-bottom: 7px;
+}
+#negociador span.negociador{
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding-top: 12px;
+	color: black;
+	text-align: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#negociador input.negociador{
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	color: black;
+	text-align: right;
+	border: 0px;
+	border-bottom: 2px solid grey;
+	background: transparent;
+	border-radius: 0px;
+}
+
+#tarjeta_negocio{
+	position: fixed;
+	display: block;
+	float: left;
+	left: 50%;
+	top: 50%;
+	height: auto!important;
+}
+#tarjeta_negocio h1{
+	font-size: 18px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+#tarjeta_negocio p{
+	font-size: 12px;
+	padding-bottom: 0px;
+}
+#tarjeta_negocio #oferta{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+#tarjeta_negocio #oferta table{
+	position: relative;
+	display: block;
+	width: 40%;
+	height: auto;
+}
+#tarjeta_negocio #oferta table#oferta_negocio{
+	margin-right: 10px;
+}
+#tarjeta_negocio #oferta table#reclamo_negocio{
+	margin-left: 10px;
+}
+#tarjeta_negocio #oferta table, #tarjeta_negocio #oferta table th, #tarjeta_negocio #oferta table td{
+	padding: 5px;
+	text-align: center;
+}
+#tarjeta_negocio #oferta table th, #tarjeta_negocio #oferta table td{
+	border: 1px dotted grey;
+}
+#tarjeta_negocio #oferta table th{
+	width: 100%;
+	height: 25px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background: #eeeeee;
+}
+
+/*----------WIDGET SOCIAL----------*/
+#fondo-widget{
+	position: fixed;
+	display: none;
+	float: left;
+	width: 100%;
+	height: 100%;
+	
+	z-index: 90;
+	background: rgba(0,0,0,0.6);
+}
+#componentesocial{
+	position: fixed;
+	display: block;
+	float: left;
+	width: 250px;
+	height: 350px;
+	top: 50%;
+	left: 0px;
+	margin-top: -175px;
+	margin-left: -330px;
+	padding: 15px 50px 25px 50px;
+	font-size:24px;
+	color: black;
+	z-index:100;
+	background: white;
+	box-shadow: 0px 2px 4px #000000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#componentesocial #titulo-widget{
+	position: relative;
+	display: block;
+	float: left;
+	width: 250px;
+}
+#componentesocial #titulo-widget img{
+	position: relative;
+	display: block;
+	float:left;
+}
+#componentesocial #titulo-widget p{
+	position: relative;
+	display: block;
+	float: right;
+	margin-top: 20px;
+	margin-right:30px;
+}
+#componentesocial #compartir{
+	position: relative;
+	display: block;
+	float: left;
+	width: 270px;
+	margin-top: 30px;
+}
+#componentesocial #compartir p{
+	border-bottom: 2px solid black;
+	margin-bottom: 10px;
+}
+#componentesocial #visitanos{
+	position: relative;
+	display: block;
+	float: left;
+	width: 270px;
+	margin-top: 30px;
+}
+#componentesocial #visitanos p{
+	border-bottom: 2px solid black;
+	margin-bottom: 10px;
+}
+#componentesocial #visitanos img{
+	width: 110px;
+	height: 41px;
+	box-shadow: 0px 2px 4px #000000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#componentesocial #visitanos img:active{
+	margin-top: 1px;
+	box-shadow: 0px 1px 2px #000000;
+}
+#componentesocial #botones-widget{
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	left: -25px;
+}
+#componentesocial #facebook{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+#componentesocial #twitter{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+#componentesocial #cerrar-widget{
+	position: absolute;
+	display: block;
+	top: -12px;
+	right: -12px;
+	opacity:0;
+    -webkit-transition: opacity 0.3s ease-in-out; 
+    -moz-transition: opacity 0.3s ease-in-out; 
+    -o-transition: opacity 0.3s ease-in-out; 
+    -ms-transition: opacity 0.3s ease-in-out;     
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*----------WIDGET CHAT PARTIDA----------*/
+#partida_chat{
+	position: fixed;
+	display: block;
+	float: left;
+	width: 45%;
+	height: 65%;
+	bottom: 0px;
+	right: 50px;
+	
+	z-index: 75;
+	background: rgba(255, 255, 255, 0.9);
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	box-shadow: 0px 2px 4px #000000;
+	overflow: hidden;
+}
+
+#chat_titulo{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 30px;
+	
+	background: #333333;
+	overflow: hidden;
+	cursor: default;
+}
+span#titulo{
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-top: 6px;
+	margin-left: 6px;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+span#controles{
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin-top: 6px;
+	margin-right: 6px;
+	color: white;
+	font-size: 14px;
+}
+span#controles img{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+
+#chat_contenedor{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 175px);
+	width: -moz-calc(100% - 175px);
+	width: -webkit-calc(100% - 175px);
+	height: calc(100% - 60px);
+	height: -moz-calc(100% - 60px);
+	height: -webkit-calc(100% - 60px);
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#chat_contenido{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 10px);
+	width: -moz-calc(100% - 10px);
+	width: -webkit-calc(100% - 10px);
+	height: auto;
+	
+	color: black;
+	text-align: left;
+	
+	padding: 5px;
+}
+#chat_contenido p{
+	position: relative;
+	display: block;
+	float: left;
+	clear: both;
+	
+	color: black!important;
+	text-align: left;
+}
+
+#chat_usuarios{
+	position: relative;
+	display: block;
+	float: left;
+	width: 174px;
+	height: calc(100% - 60px);
+	height: -moz-calc(100% - 60px);
+	height: -webkit-calc(100% - 60px);
+	
+	border-left: 1px solid #333;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#chat_lista_usuarios{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+
+}
+#chat_lista_usuarios p{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 10px);
+	width: -moz-calc(100% - 10px);
+	width: -webkit-calc(100% - 10px);
+	height: 20px;
+	padding: 5px;
+	clear: both;
+	
+	border-bottom: 1px solid #ccc;
+}
+#chat_lista_usuarios img{
+	margin-top: 3px;
+}
+#chat_lista_usuarios img.indicador{
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+}
+
+#partida_chat #chat_escribir{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	height: 29px;
+	margin-top: 0px;
+	
+	color: #333;
+	font-size: 14px;
+	
+	border: none;
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	background: white;
+}
+
+#partida_chat  #enlace_mesa{
+	position: relative;
+	display: none;
+	float: right;
+	width: 0px;
+	height: 29px;
+	margin-top: 0px;
+	
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+}
+#partida_chat  #enlace_mesa a.boton{
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	padding-top: 1px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+/* ADMINISTRACION */
+#menu_secciones {
+	position: fixed;
+	float: left;
+	width: 200px;
+	top: 40px;
+	margin-bottom: 10px;
+	left: calc(160px + 2%);
+	left: -moz-calc(160px + 2%);
+	left: -webkit-calc(160px + 2%);
+	padding: 10px 20px 10px 20px;
+	background: rgba(255,255,255,0.7);
+	font-size: 18px;
+}
+#menu_secciones ul{
+	width: 95%;
+}
+#menu_secciones li{
+	color: black;
+	text-align: center;
+	width: 100%;
+	text-decoration: none;
+	padding: 4px 2px 4px 2px;
+	border-radius: 3px;
+}
+#menu_secciones li:hover{
+	background: grey;
+	color: white;
+	box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+#menu_secciones li:active{
+	background: grey;
+	color: white;
+	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+#menu_secciones a{
+	text-decoration: none;
+}
+
+#contenido_admin {
+	position: relative;
+	float: right;
+	height: auto;
+	min-width: 420px;
+	width: calc(94% - 280px);
+	width: -webkit-calc(94% - 280px);
+	width: -moz-calc(94% - 280px);
+	top: 40px;
+	margin-bottom: 10px;
+	right: 2%;
+	padding: 10px 20px 10px 20px;
+	background: rgba(255,255,255,0.7);
+	font-size: 12px!important;
+}
+#contenido_admin th, #contenido_admin td{
+	padding: 2px 5px 2px 5px;
+	text-align: center;
+}
+#contenido_admin table{
+	width: 100%;
+	border: 1px dotted black;
+}
+#contenido_admin th, #contenido_admin td{
+	width: auto;
+	border: 1px dotted #999;
+}
+#contenido_admin a, #contenido_admin a:visited{
+	text-decoration: none;
+	color: black;
+} 
+
+form.personal span{
+	position: relative;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	min-width: 70px;
+}
+form.personal label{
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 14px!important;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	min-width: 120px;
+}
+form.personal input{
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 14px!important;
+	margin-left: 10px;
+}
+form.personal select{
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 14px!important;
+	margin-left: 10px;
+}
+form.personal input[type="text"], form.personal select{
+	min-width: 250px;
+}
+form.personal input[type="checkbox"], form.personal select{
+	margin-top: 10px;
+}
+
+form.personal input.editar, img.editar, form input.borrar, img.borrar{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 20px!important;
+	height: 20px!important;
+	padding: 0px!important;
+	margin: 0px!important;
+	border: none!important;
+	box-shadow:  none!important;
+}
+form.personal input.editar{
+	background-image: url('img/desconexiones.png')!important;
+	background-repeat: no-repeat!important;
+	background-size: contain!important;
+}
+form.personal input.borrar{
+	background-image: url('img/derrotas.png')!important;
+	background-repeat: no-repeat!important;
+	background-size: contain!important;
+}
+form.personal input.conectar, img.conectar{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 12px!important;
+	height: 12px!important;
+	padding: 0px!important;
+	border: none!important;
+	box-shadow:  none!important;
+}
+form.personal input.conectar{
+	background-repeat: no-repeat!important;
+	background-size: contain!important;
+}
+
+#contenido_admin #confirmacion{
+	display: none;
+}

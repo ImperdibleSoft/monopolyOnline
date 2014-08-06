@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------
+2.4
+--------------------------------------------------------------------------
+//	Los perfiles de usuario ahora se abren en una nueva ventana.
+//	Actualizado el sistema de tirada de dados.
+Implementado sistema de denuncias de jugadores ausentes en una mesa (sin empezar la partida).
+Constructor de casas, muestra todas las propiedades del grupo.
+Corrección de errores menores.
+	Revisar: Al agotar los turnos de prisión, alguien cae en la casilla y no cobras.
+	Revisar: Al pagar fianza, sales al instante.
+	Revisar: Error de la banca, cobra 200 (los paga)
+
+
+
+
+
+
+(Admin) Implementado sistema de pausa en las partidas para los administradores.
+Al caer en una calle para comprarla, mostrar el resto de casillas del color con sus propietarios.
+Al recibir una oferta de negocio, mostrar las otras propiedades de los negociantes.
+Chat general cuando no hay ninguna mesa seleccionada.
+Implementar sistema de notificación de logros.
+Fichas más coloridas.

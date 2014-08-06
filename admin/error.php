@@ -1,0 +1,1 @@
+<?php	include "../includes/cabecera_inicio.php";	if(isset($_SESSION['id_usuario'])){		$logeado = true;	}?><div id="portada_contenido">	<div class="espaciador"></div>	<div class="feature">		<h1>Error</h1>		<br />		<p><?php echo $error; ?></p>	</div>	<div class="espaciador"></div></div><?php include "../includes/pie.php"; ?>
