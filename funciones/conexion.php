@@ -1,13 +1,13 @@
 <?php
 	$local['servidor'] = "localhost";
-	$local['usuario'] = "root";
+	$local['usuario'] = "";
 	$local['password'] = "";
-	$local['bbdd'] = "imperdiblesoft";
+	$local['bbdd'] = "";
 	
 	$internet['servidor'] = "localhost";
-	$internet['usuario'] = "s1360242_user";
-	$internet['password'] = "secret29+";
-	$internet['bbdd'] = "s1360242_imperdiblesoft";
+	$internet['usuario'] = "";
+	$internet['password'] = "";
+	$internet['bbdd'] = "";
 	
 	
 	$conexion = mysqli_connect($internet['servidor'], $internet['usuario'], $internet['password']);
